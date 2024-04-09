@@ -5,9 +5,9 @@ function Header() {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className='links-header-container'>
           <li><Link to="/">Characters</Link></li>
-          <li><Link to="/episodios">Espisodies</Link></li>
+          <li><Link to="/episodios">Espisodes</Link></li>
         </ul>
       </nav>
     </header>

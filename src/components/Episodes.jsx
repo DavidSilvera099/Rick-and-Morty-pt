@@ -19,8 +19,8 @@ function Episodes() {
   }, []);
 
   return (
-    <div>
-      <h1>Episodios</h1>
+    <div className='page-episodes-container'>
+      <h1 id='ep-title'>EPISODES</h1>
       <div className="episodes-container">
         {episodes.map(episode => {
           const match = episode.episode.match(/S(\d+)E(\d+)/);
@@ -28,9 +28,9 @@ function Episodes() {
           const episodeNumber = match ? match[2] : 'N/A';
           return (
             <div key={episode.id} className="episode-card">
-              <h2>{episode.name}</h2>
-              <p>Fecha de emisión: {episode.air_date}</p>
-              <p>Temporada: {season}, Episodio: {episodeNumber}</p>
+              <h2 className='ep-card-title'>{episode.name}</h2>
+              <p> <span className='temp-card'>Season {season}</span> <span className='ep-card'>Episode {episodeNumber}</span></p>
+              <p> <span className='ep-card'>Launch:</span> <br></br>{episode.air_date}</p>
             </div>
           );
         })}
