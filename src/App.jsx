@@ -5,6 +5,8 @@ import SearchAndFilter from "./components/SearchAndFilter";
 import CharacterCard from "./components/CharacterCard";
 import Footer from './components/Footer';
 import CharacterDetails from "./components/CharacterDetails";
+import Header from './components/Header'; // Importa el componente Header
+import Episodes from './components/Episodes'; // Importa el componente Episodes
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -13,6 +15,7 @@ function App() {
   const [paginaActual, setPaginaActual] = useState(1);
   const elementosPorPagina = 12; // 3 filas de 4 columnas = 12 elementos por página
 
+  // Llamada a la API para obtener personajes.
   const getCharacters = async (name = '', status = '') => {
     let url = `https://rickandmortyapi.com/api/character/?name=${name}&status=${status}`;
     try {
@@ -24,19 +27,22 @@ function App() {
       setCharacters(data.results || null);
     } catch (error) {
       console.error('Fetch error:', error);
-      setCharacters(null); 
+      setCharacters(null);
     }
   };
 
+  // Efecto para actualizar la lista de personajes cuando cambian los filtros.
   useEffect(() => {
     getCharacters(nameFilter, statusFilter);
   }, [nameFilter, statusFilter]);
 
+  // Cálculo de personajes a mostrar en la página actual
   const personajesActuales = characters ? characters.slice((paginaActual - 1) * elementosPorPagina, paginaActual * elementosPorPagina) : [];
   const totalDePaginas = characters ? Math.ceil(characters.length / elementosPorPagina) : 0;
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={
           <>
@@ -64,6 +70,7 @@ function App() {
           </>
         } />
         <Route path="/character/:id" element={<CharacterDetails />} />
+        <Route path="/episodios" element={<Episodes />} />
       </Routes>
       <Footer />
     </BrowserRouter>
