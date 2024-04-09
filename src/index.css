@@ -255,6 +255,20 @@ input:focus-visible {
   font-weight: 600;
   line-height: 132%; /* 15.84px */
 }
+.pagination {
+  width: fit-content;
+  margin: 1% 5% 0 auto;
+}
+.pagination button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 132%; /* 26.4px */
+}
 
 /* Estilos para teléfonos móviles */
 @media only screen and (max-width: 480px) {
