@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(https://s3-alpha-sig.figma.com/img/281b/babb/533481576898d03761264d9d7e59df83?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Qv7yaGxYeXTwt778p-WpswLUdaESQAtmeadfYvN7QCwJD9cSCq0hH-KKHMDwdiD6d3vvx5CaFVbj5Rm4~ve-U3jJbTtsptjRLiSG3jYEge1~SmCnw9EOLBtjLi8xvZOurBwQVpHUhEfaUKS496FvcHWClti1fKucXJ3XYwbf65hBnE07LfFny6Xzp5rvyh-JbEeyJ2f-Zrt8mGQxjz0M987SDBcFNwjBE6ItfrsMgC0T5okeQltKy~x4F9IsnBdjJIaNK8WiupcyAjIIjREfTS17wCuLq3~uA7IXdlpj8DVua3EEpmBNk31aKpW5d~1TzPjUyvAglBLw5lYGY7-SAg__);
+  background-image: url("./assets/1330376.png");
   background-position: center 40%;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -356,6 +356,10 @@ input:focus-visible {
       padding: 2.5rem 0;
   }
 
+  .image-banner {
+    height: 14em;
+  }
+
   .image-banner h1 {
     font-size: 34px;
   }
@@ -375,32 +379,35 @@ input:focus-visible {
     width: 95%;
     gap: 5px;
     left: 3%;
+    top: 29%;
   }
 
   #status-filters {
     width: 15%;
   }
+
   #name-filter {
-      width: 50%;
-      padding: 6px 0px;
-      margin: auto;
+    width: 50%;
+    padding: 6px 0px;
+    margin: auto;
   }
 
   #characters {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .character-card {
-      margin-bottom: 4vh;
-      height: auto;
-      gap: 8vw;
+    min-height: auto;
+    gap: 4vw;
+  }
+
+  .card-image-container,  
+  .character-card img {
+    width: 40vw;
   }
 
   #ep-title { 
     font-size: 45px;
-  }
-  .character-card img {
-    width: 35vw;
   }
 
   .character-info { 
