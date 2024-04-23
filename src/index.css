@@ -39,6 +39,7 @@ body {
   background: #282B32;
   padding: 4.5rem 0px;
   min-height: 40vh;
+  width: 100%;
 }
 
 .input-wrapper {
