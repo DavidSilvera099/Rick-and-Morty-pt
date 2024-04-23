@@ -424,7 +424,6 @@ input:focus-visible {
   
   .character-img-container {
     width: 100%;
-    height: 100vh;
   }
 
   .character-image {
